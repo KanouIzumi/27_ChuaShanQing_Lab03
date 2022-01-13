@@ -55,7 +55,7 @@ public class BasketMovementScript_Level2 : MonoBehaviour
         {
             print("Bad Stuff");
             Destroy(collision.gameObject);
-
+            SceneManager.LoadScene("LoseScene");
         }
     }
 
