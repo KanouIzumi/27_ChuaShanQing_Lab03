@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class BasketMovementScript : MonoBehaviour
+public class BasketMovementScript_Level2 : MonoBehaviour
 {
     public float speed;
 
@@ -29,21 +29,21 @@ public class BasketMovementScript : MonoBehaviour
     void Update()
     {
 
-      float horizontalInput = Input.GetAxis("Horizontal");
+        float horizontalInput = Input.GetAxis("Horizontal");
 
-      transform.position = transform.position + new Vector3(horizontalInput * speed * Time.deltaTime, 0, 0);
+        transform.position = transform.position + new Vector3(horizontalInput * speed * Time.deltaTime, 0, 0);
 
-        
-       if (score == 100)
+
+        if (score == 100)
         {
-            SceneManager.LoadScene("GamePlay_Level 2");
+            SceneManager.LoadScene("WinScene");
         }
 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Healthy"))
+        if (collision.gameObject.CompareTag("Healthy"))
         {
             score += 10;
             print("Got Fruit!");
@@ -51,7 +51,7 @@ public class BasketMovementScript : MonoBehaviour
             scoreText.GetComponent<Text>().text = "Score: " + score.ToString();
         }
 
-        else if(collision.gameObject.CompareTag("Unhealthy"))
+        else if (collision.gameObject.CompareTag("Unhealthy"))
         {
             print("Bad Stuff");
             Destroy(collision.gameObject);
