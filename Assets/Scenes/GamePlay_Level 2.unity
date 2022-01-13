@@ -307,10 +307,10 @@ GameObject:
   m_Component:
   - component: {fileID: 749641438}
   - component: {fileID: 749641437}
-  - component: {fileID: 749641439}
   - component: {fileID: 749641442}
   - component: {fileID: 749641441}
   - component: {fileID: 749641440}
+  - component: {fileID: 749641439}
   m_Layer: 0
   m_Name: Basket
   m_TagString: Player
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 749641436}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf1f9f26821f4be59f380600ae4018d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d73f7daf54747f46978e6c212c238b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15

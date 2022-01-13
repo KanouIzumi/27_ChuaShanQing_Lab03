@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Button_Controller : MonoBehaviour
 {
@@ -14,5 +15,10 @@ public class Button_Controller : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("GamePlay_Level 1");
     }
 }
