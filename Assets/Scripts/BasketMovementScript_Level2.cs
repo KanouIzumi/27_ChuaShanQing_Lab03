@@ -46,6 +46,7 @@ public class BasketMovementScript_Level2 : MonoBehaviour
         if (collision.gameObject.CompareTag("Healthy"))
         {
             score += 10;
+            audioSource.PlayOneShot(AudioClipBGMArr[0]);
             print("Got Fruit!");
             Destroy(collision.gameObject);
             scoreText.GetComponent<Text>().text = "Score: " + score.ToString();
@@ -53,9 +54,10 @@ public class BasketMovementScript_Level2 : MonoBehaviour
 
         else if (collision.gameObject.CompareTag("Unhealthy"))
         {
+            audioSource.PlayOneShot(AudioClipBGMArr[1]);
             print("Bad Stuff");
             Destroy(collision.gameObject);
-            SceneManager.LoadScene("LoseScene");
+            //SceneManager.LoadScene("LoseScene");
         }
     }
 

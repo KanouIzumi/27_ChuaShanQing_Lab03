@@ -47,12 +47,14 @@ public class BasketMovementScript : MonoBehaviour
         {
             score += 10;
             print("Got Fruit!");
+            audioSource.PlayOneShot(AudioClipBGMArr[0]);
             Destroy(collision.gameObject);
             scoreText.GetComponent<Text>().text = "Score: " + score.ToString();
         }
 
         else if(collision.gameObject.CompareTag("Unhealthy"))
         {
+            audioSource.PlayOneShot(AudioClipBGMArr[1]);
             print("Bad Stuff");
             Destroy(collision.gameObject);
             SceneManager.LoadScene("LoseScene");
