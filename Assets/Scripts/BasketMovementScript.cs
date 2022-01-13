@@ -56,7 +56,7 @@ public class BasketMovementScript : MonoBehaviour
         {
             audioSource.PlayOneShot(AudioClipBGMArr[1]);
             print("Bad Stuff");
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject,2);
             SceneManager.LoadScene("LoseScene");
 
         }
